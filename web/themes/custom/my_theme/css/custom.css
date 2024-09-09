@@ -1,0 +1,17 @@
+.body-wrapper {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.toggle-button {
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.toggle-button:hover {
+  background-color: #0056b3;
+}
+

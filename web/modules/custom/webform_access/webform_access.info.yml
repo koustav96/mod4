@@ -1,0 +1,4 @@
+name: 'Address Validation for Webform'
+type: module
+description: 'Validates if the address is already present based on email for a Webform.'
+core_version_requirement: ^10

@@ -1,0 +1,7 @@
+name: 'My Theme'
+type: theme
+description: 'A custom theme for your site.'
+core_version_requirement: ^8 || ^9
+base theme: Olivero
+libraries:
+  - your_theme/custom
