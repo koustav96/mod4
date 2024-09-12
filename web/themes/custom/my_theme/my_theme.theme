@@ -1,9 +1,0 @@
-<?php
-
-/**
- * Implements hook_preprocess_node().
- */
-function your_theme_preprocess_node(&$variables) {
-  // Attach custom library to nodes.
-  $variables['#attached']['library'][] = 'my_theme/custom';
-}
