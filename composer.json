@@ -25,6 +25,7 @@
         "drupal/devel": "^5.0",
         "drupal/expand_collapse_formatter": "^2.0",
         "drupal/pathauto": "^1.13",
+        "drupal/rest_views": "^3.0",
         "drupal/smart_trim": "^2.2",
         "drupal/token": "^1.15",
         "drupal/webform": "^6.2",

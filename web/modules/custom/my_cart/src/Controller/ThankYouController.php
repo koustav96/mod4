@@ -52,7 +52,7 @@ class ThankYouController extends ControllerBase {
     $item_name = $this->state->get('thank_you_item_name');
     $user_name = $this->state->get('thank_you_user_name');
 
-    // Ensure the item name and user name are available.
+    // Ensure the item name and user name are available. 
     if (!$item_name || !$user_name) {
       return [
         '#type' => 'markup',
