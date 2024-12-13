@@ -1,0 +1,36 @@
+<?php
+
+use Drupal\webform\WebformSubmissionInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function webform_access_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  // dd($form['#form_id']);  
+
+  if ($form_id == 'webform_submission_add_address_add_form') {
+
+    // Get the current user's ID.
+    $uid = \Drupal::currentUser()->id();
+
+    // Load all submissions by this user for the specific webform.
+    $webform_id = 'add_address'; 
+    $submissions = \Drupal::entityTypeManager()->getStorage('webform_submission')
+      ->loadByProperties([
+        'webform_id' => $webform_id,
+        'uid' => $uid,
+      ]);
+
+    // If the user has already submitted the form.
+    if (!empty($submissions)) {
+
+      $form['elements'] = [
+        '#type' => 'markup',
+        '#markup' => '<h3>' . t('You have already added this address.') . '<h3>',
+      ];
+      if (isset($form['actions'])) {
+        unset($form['actions']);
+      }
+    }
+  }
+}

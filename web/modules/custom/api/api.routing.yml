@@ -1,0 +1,7 @@
+api.example:
+  path: '/api/fetch-data'
+  defaults:
+    _title: 'Product Api'
+    _controller: '\Drupal\api\Controller\ApiController::getProducts'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,6 @@
+my_cart.thank_you_page:
+  path: '/thank-you'
+  defaults:
+    _controller: '\Drupal\my_cart\Controller\ThankYouController::content'
+  requirements:
+    _permission: 'access thank you page'
